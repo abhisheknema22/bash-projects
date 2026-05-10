@@ -15,12 +15,12 @@
 echo "script to install Docker"
 echo "Installing docker.io"
 
-if [[ "$(cat /etc/os-release | grep PRETTY_NAME=)"  == "Ubuntu 26.04 LTS" ]];
+if [[ "$(cat /etc/os-release | grep NAME=)"  == '"Ubuntu"' ]];
 then
 	echo "This is Ubuntu"
 	sudo apt update && apt install docker.io -y
 
-elif [[ "$(cat /etc/os-release | grep PRETTY_NAME=)"  == "Amazon Linux 2023.11.20260509" ]];
+elif [[ "$(cat /etc/os-release | grep NAME=)"  == '"Amazon Linux"' ]];
 then
 	echo "This is Amazon Linux"
 	sudo dnf update && dnf install docker.io -y
